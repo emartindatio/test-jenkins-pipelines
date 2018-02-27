@@ -1,6 +1,11 @@
-pipeline {
-    agent any
+node {
     stages {
+        stage('Checkout') {
+            steps {
+                echo 'Starting checkout stage...'
+                checkout scm
+            }
+        }
         stage('Configure') {
             steps {
                 echo 'Starting configure stage...'
