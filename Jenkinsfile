@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Configure') {
+            steps {
+                echo 'Starting configure stage...'
+                sleep 10
+                echo 'Configure stage completed sucessfully'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Starting build stage...'
