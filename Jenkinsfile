@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Checkout SCM') {
+            steps {
+                echo 'Starting checkout scm stage...'
+                checkout scm
+            }
+        }
         stage('Configure') {
             steps {
                 echo 'Starting configure stage...'
